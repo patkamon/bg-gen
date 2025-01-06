@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/bg-gen/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-deploy/" : "/",
   plugins: [
     vue(),
     vueDevTools(),
